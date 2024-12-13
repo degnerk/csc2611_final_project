@@ -1,0 +1,101 @@
+                                                                                                                                                
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 20.07-tf1 (build 14714473.1)
+TensorFlow Version 1.15.3
+
+Container image Copyright (c) 2020, NVIDIA CORPORATION.  All rights reserved.
+Copyright 2017-2020 The TensorFlow Authors.  All rights reserved.
+
+NVIDIA Deep Learning Profiler (dlprof) Copyright (c) 2020, NVIDIA CORPORATION.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION.  All rights reserved.
+NVIDIA modifications are covered by the license terms that apply to the underlying project or file.
+
+Detected MOFED 5.7-1.0.2.
+
+NOTE: MOFED driver was detected, but nv_peer_mem driver was not detected.
+      Multi-node communication performance may be reduced.
+
+Sun Dec  8 22:54:29 2024[1]<stdout>:Namespace(augment_data='false', batch_size='32', data='/home/kettnert/FinalProject/data/70-dog-breedsimage-data-set-updated', epochs='10', fine_tune='false', main_dir='/home/kettnert/FinalProject')
+Sun Dec  8 22:54:29 2024[0]<stdout>:Namespace(augment_data='false', batch_size='32', data='/home/kettnert/FinalProject/data/70-dog-breedsimage-data-set-updated', epochs='10', fine_tune='false', main_dir='/home/kettnert/FinalProject')
+Sun Dec  8 22:54:31 2024[1]<stdout>:Model: "model_1"
+Sun Dec  8 22:54:31 2024[1]<stdout>:_________________________________________________________________
+Sun Dec  8 22:54:31 2024[1]<stdout>:Layer (type)                 Output Shape              Param #   
+Sun Dec  8 22:54:31 2024[1]<stdout>:=================================================================
+Sun Dec  8 22:54:31 2024[1]<stdout>:input_2 (InputLayer)         (None, 224, 224, 3)       0         
+Sun Dec  8 22:54:31 2024[1]<stdout>:_________________________________________________________________
+Sun Dec  8 22:54:31 2024[1]<stdout>:vgg16 (Model)                (None, 7, 7, 512)         14714688  
+Sun Dec  8 22:54:31 2024[1]<stdout>:_________________________________________________________________
+Sun Dec  8 22:54:31 2024[1]<stdout>:global_average_pooling2d_1 ( (None, 512)               0         
+Sun Dec  8 22:54:31 2024[1]<stdout>:_________________________________________________________________
+Sun Dec  8 22:54:31 2024[1]<stdout>:dense_1 (Dense)              (None, 40)                20520     
+Sun Dec  8 22:54:31 2024[1]<stdout>:=================================================================
+Sun Dec  8 22:54:31 2024[1]<stdout>:Total params: 14,735,208
+Sun Dec  8 22:54:31 2024[1]<stdout>:Trainable params: 20,520
+Sun Dec  8 22:54:31 2024[1]<stdout>:Non-trainable params: 14,714,688
+Sun Dec  8 22:54:31 2024[1]<stdout>:_________________________________________________________________
+Sun Dec  8 22:54:31 2024[0]<stdout>:Model: "model_1"
+Sun Dec  8 22:54:31 2024[0]<stdout>:_________________________________________________________________
+Sun Dec  8 22:54:31 2024[0]<stdout>:Layer (type)                 Output Shape              Param #   
+Sun Dec  8 22:54:31 2024[0]<stdout>:=================================================================
+Sun Dec  8 22:54:31 2024[0]<stdout>:input_2 (InputLayer)         (None, 224, 224, 3)       0         
+Sun Dec  8 22:54:31 2024[0]<stdout>:_________________________________________________________________
+Sun Dec  8 22:54:31 2024[0]<stdout>:vgg16 (Model)                (None, 7, 7, 512)         14714688  
+Sun Dec  8 22:54:31 2024[0]<stdout>:_________________________________________________________________
+Sun Dec  8 22:54:31 2024[0]<stdout>:global_average_pooling2d_1 ( (None, 512)               0         
+Sun Dec  8 22:54:31 2024[0]<stdout>:_________________________________________________________________
+Sun Dec  8 22:54:31 2024[0]<stdout>:dense_1 (Dense)              (None, 40)                20520     
+Sun Dec  8 22:54:31 2024[0]<stdout>:=================================================================
+Sun Dec  8 22:54:31 2024[0]<stdout>:Total params: 14,735,208
+Sun Dec  8 22:54:31 2024[0]<stdout>:Trainable params: 20,520
+Sun Dec  8 22:54:31 2024[0]<stdout>:Non-trainable params: 14,714,688
+Sun Dec  8 22:54:31 2024[0]<stdout>:_________________________________________________________________
+Sun Dec  8 22:54:31 2024[1]<stdout>:Found 4600 images belonging to 40 classes.
+Sun Dec  8 22:54:31 2024[0]<stdout>:Found 4600 images belonging to 40 classes.
+Sun Dec  8 22:54:31 2024[1]<stdout>:Found 400 images belonging to 40 classes.
+Sun Dec  8 22:54:31 2024[0]<stdout>:Found 400 images belonging to 40 classes.
+Sun Dec  8 22:54:32 2024[1]<stdout>:Epoch 1/10
+Sun Dec  8 22:54:32 2024[0]<stdout>:Epoch 1/10
+Sun Dec  8 22:55:07 2024[0]<stdout>: - 35s - loss: 12.4433 - accuracy: 0.5649 - val_loss: 3.1877 - val_accuracy: 0.8021
+Sun Dec  8 22:55:07 2024[0]<stdout>:Epoch 2/10
+Sun Dec  8 22:55:07 2024[1]<stdout>: - 35s - loss: 13.0869 - accuracy: 0.5389 - val_loss: 1.6985 - val_accuracy: 0.7969
+Sun Dec  8 22:55:07 2024[1]<stdout>:Epoch 2/10
+Sun Dec  8 22:55:19 2024[0]<stdout>: - 12s - loss: 3.2138 - accuracy: 0.7945 - val_loss: 3.0821 - val_accuracy: 0.7760
+Sun Dec  8 22:55:19 2024[0]<stdout>:Epoch 3/10
+Sun Dec  8 22:55:19 2024[1]<stdout>: - 12s - loss: 3.0813 - accuracy: 0.7905 - val_loss: 4.9291 - val_accuracy: 0.7396
+Sun Dec  8 22:55:19 2024[1]<stdout>:Epoch 3/10
+Sun Dec  8 22:55:34 2024[0]<stdout>: - 15s - loss: 2.5852 - accuracy: 0.8450 - val_loss: 3.1434 - val_accuracy: 0.8352
+Sun Dec  8 22:55:34 2024[0]<stdout>:Epoch 4/10
+Sun Dec  8 22:55:34 2024[1]<stdout>: - 15s - loss: 2.6734 - accuracy: 0.8319 - val_loss: 1.7300 - val_accuracy: 0.7898
+Sun Dec  8 22:55:34 2024[1]<stdout>:Epoch 4/10
+Sun Dec  8 22:55:46 2024[1]<stdout>: - 12s - loss: 1.6452 - accuracy: 0.8860 - val_loss: 1.4168 - val_accuracy: 0.8698
+Sun Dec  8 22:55:46 2024[1]<stdout>:Epoch 5/10
+Sun Dec  8 22:55:46 2024[0]<stdout>: - 13s - loss: 1.8505 - accuracy: 0.8671 - val_loss: 2.1332 - val_accuracy: 0.8542
+Sun Dec  8 22:55:46 2024[0]<stdout>:Epoch 5/10
+Sun Dec  8 22:55:59 2024[0]<stdout>: - 12s - loss: 1.1490 - accuracy: 0.9125 - val_loss: 6.4534 - val_accuracy: 0.8295
+Sun Dec  8 22:55:59 2024[0]<stdout>:Epoch 6/10
+Sun Dec  8 22:55:59 2024[1]<stdout>: - 12s - loss: 1.2390 - accuracy: 0.9142 - val_loss: 2.1559 - val_accuracy: 0.8352
+Sun Dec  8 22:55:59 2024[1]<stdout>:Epoch 6/10
+Sun Dec  8 22:56:11 2024[0]<stdout>: - 13s - loss: 1.5217 - accuracy: 0.8974 - val_loss: 0.2953 - val_accuracy: 0.9219
+Sun Dec  8 22:56:11 2024[0]<stdout>:Epoch 7/10
+Sun Dec  8 22:56:11 2024[1]<stdout>: - 13s - loss: 1.7112 - accuracy: 0.8958 - val_loss: 3.4599 - val_accuracy: 0.8490
+Sun Dec  8 22:56:11 2024[1]<stdout>:Epoch 7/10
+Sun Dec  8 22:56:24 2024[1]<stdout>: - 12s - loss: 1.2287 - accuracy: 0.9190 - val_loss: 8.4445 - val_accuracy: 0.8750
+Sun Dec  8 22:56:24 2024[1]<stdout>:Epoch 8/10
+Sun Dec  8 22:56:24 2024[0]<stdout>: - 13s - loss: 1.1063 - accuracy: 0.9239 - val_loss: 0.1311 - val_accuracy: 0.9375
+Sun Dec  8 22:56:24 2024[0]<stdout>:Epoch 8/10
+Sun Dec  8 22:56:37 2024[0]<stdout>: - 13s - loss: 0.9053 - accuracy: 0.9313 - val_loss: 0.2426 - val_accuracy: 0.8594
+Sun Dec  8 22:56:37 2024[0]<stdout>:Epoch 9/10
+Sun Dec  8 22:56:37 2024[1]<stdout>: - 13s - loss: 1.1573 - accuracy: 0.9134 - val_loss: 4.9319 - val_accuracy: 0.8854
+Sun Dec  8 22:56:37 2024[1]<stdout>:Epoch 9/10
+Sun Dec  8 22:56:49 2024[0]<stdout>: - 13s - loss: 0.9295 - accuracy: 0.9284 - val_loss: 1.5854 - val_accuracy: 0.8864
+Sun Dec  8 22:56:49 2024[0]<stdout>:Epoch 10/10
+Sun Dec  8 22:56:49 2024[1]<stdout>: - 13s - loss: 0.7161 - accuracy: 0.9514 - val_loss: 1.6540 - val_accuracy: 0.9091
+Sun Dec  8 22:56:49 2024[1]<stdout>:Epoch 10/10
+Sun Dec  8 22:57:02 2024[0]<stdout>: - 13s - loss: 0.8992 - accuracy: 0.9307 - val_loss: 1.5401 - val_accuracy: 0.8698
+Sun Dec  8 22:57:02 2024[1]<stdout>: - 13s - loss: 0.9261 - accuracy: 0.9375 - val_loss: 4.4634 - val_accuracy: 0.8438
+Sun Dec  8 22:57:02 2024[0]<stdout>:/home/kettnert/FinalProject/model_b32_e10 rank 0.png
+Sun Dec  8 22:57:02 2024[1]<stdout>:/home/kettnert/FinalProject/model_b32_e10 rank 1.png

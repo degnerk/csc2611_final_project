@@ -1,0 +1,59 @@
+MOFED version '5.7-1.0.2' not available in this container.
+No matching alternate version found.
+                                                                                                                                                
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 20.07-tf2 (build 14714731)
+TensorFlow Version 2.2.0
+
+Container image Copyright (c) 2020, NVIDIA CORPORATION.  All rights reserved.
+Copyright 2017-2020 The TensorFlow Authors.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION.  All rights reserved.
+NVIDIA modifications are covered by the license terms that apply to the underlying project or file.
+ERROR: No supported GPU(s) detected to run this container
+
+Detected MOFED 5.7-1.0.2.
+
+NOTE: MOFED driver was detected, but nv_peer_mem driver was not detected.
+      Multi-node communication performance may be reduced.
+
+2024-11-26 15:40:20.764688: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.11.0
+2024-11-26 15:40:25.494930: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2024-11-26 15:40:25.498952: E tensorflow/stream_executor/cuda/cuda_driver.cc:313] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2024-11-26 15:40:25.499011: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: dh-node13
+2024-11-26 15:40:25.499028: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: dh-node13
+2024-11-26 15:40:25.500441: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: Invalid argument: expected %d.%d, %d.%d.%d, or %d.%d.%d.%d form for driver version; got "1"
+2024-11-26 15:40:25.500468: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 555.42.2
+2024-11-26 15:40:25.519766: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 2600000000 Hz
+2024-11-26 15:40:25.521057: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7fe038000b20 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2024-11-26 15:40:25.521074: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Namespace(augment_data='false', batch_size='32', data='home/kettnert/FinalProject/70-dog-breedsimage-data-set-updated', epochs='10', fine_tune='false', main_dir='home/kettnert/FinalProject')
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_2 (InputLayer)         [(None, 224, 224, 3)]     0         
+_________________________________________________________________
+vgg16 (Model)                (None, 7, 7, 512)         14714688  
+_________________________________________________________________
+global_average_pooling2d (Gl (None, 512)               0         
+_________________________________________________________________
+dense (Dense)                (None, 70)                35910     
+=================================================================
+Total params: 14,750,598
+Trainable params: 35,910
+Non-trainable params: 14,714,688
+_________________________________________________________________
+Traceback (most recent call last):
+  File "model.py", line 154, in <module>
+    main()
+  File "model.py", line 110, in main
+    class_mode="categorical")
+  File "/usr/local/lib/python3.6/dist-packages/keras_preprocessing/image/image_data_generator.py", line 540, in flow_from_directory
+    interpolation=interpolation
+  File "/usr/local/lib/python3.6/dist-packages/keras_preprocessing/image/directory_iterator.py", line 106, in __init__
+    for subdir in sorted(os.listdir(directory)):
+FileNotFoundError: [Errno 2] No such file or directory: 'home/kettnert/FinalProject/70-dog-breedsimage-data-set-updated/train/'

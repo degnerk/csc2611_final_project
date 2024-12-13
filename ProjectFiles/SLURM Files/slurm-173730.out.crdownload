@@ -1,0 +1,83 @@
+MOFED version '5.7-1.0.2' not available in this container.
+No matching alternate version found.
+                                                                                                                                                
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 20.07-tf2 (build 14714731)
+TensorFlow Version 2.2.0
+
+Container image Copyright (c) 2020, NVIDIA CORPORATION.  All rights reserved.
+Copyright 2017-2020 The TensorFlow Authors.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION.  All rights reserved.
+NVIDIA modifications are covered by the license terms that apply to the underlying project or file.
+ERROR: No supported GPU(s) detected to run this container
+
+Detected MOFED 5.7-1.0.2.
+
+NOTE: MOFED driver was detected, but nv_peer_mem driver was not detected.
+      Multi-node communication performance may be reduced.
+
+2024-12-02 08:17:58.329810: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.11.0
+2024-12-02 08:18:03.094324: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2024-12-02 08:18:03.099789: E tensorflow/stream_executor/cuda/cuda_driver.cc:313] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2024-12-02 08:18:03.099815: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: dh-node13
+2024-12-02 08:18:03.099820: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: dh-node13
+2024-12-02 08:18:03.100973: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: Invalid argument: expected %d.%d, %d.%d.%d, or %d.%d.%d.%d form for driver version; got "1"
+2024-12-02 08:18:03.100997: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 555.42.2
+2024-12-02 08:18:03.120311: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 2600000000 Hz
+2024-12-02 08:18:03.121713: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7fb560000b20 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2024-12-02 08:18:03.121732: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Namespace(augment_data='false', batch_size='32', data='/home/kettnert/FinalProject/data/70-dog-breedsimage-data-set-updated', epochs='10', fine_tune='false', main_dir='/home/kettnert/FinalProject')
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_2 (InputLayer)         [(None, 224, 224, 3)]     0         
+_________________________________________________________________
+vgg16 (Model)                (None, 7, 7, 512)         14714688  
+_________________________________________________________________
+global_average_pooling2d (Gl (None, 512)               0         
+_________________________________________________________________
+dense (Dense)                (None, 70)                35910     
+=================================================================
+Total params: 14,750,598
+Trainable params: 35,910
+Non-trainable params: 14,714,688
+_________________________________________________________________
+Found 4600 images belonging to 40 classes.
+Found 400 images belonging to 40 classes.
+Epoch 1/10
+Traceback (most recent call last):
+  File "model.py", line 154, in <module>
+    main()
+  File "model.py", line 124, in main
+    verbose=2)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/keras/engine/training.py", line 66, in _method_wrapper
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/keras/engine/training.py", line 848, in fit
+    tmp_logs = train_function(iterator)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/eager/def_function.py", line 580, in __call__
+    result = self._call(*args, **kwds)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/eager/def_function.py", line 644, in _call
+    return self._stateless_fn(*args, **kwds)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/eager/function.py", line 2420, in __call__
+    return graph_function._filtered_call(args, kwargs)  # pylint: disable=protected-access
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/eager/function.py", line 1665, in _filtered_call
+    self.captured_inputs)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/eager/function.py", line 1746, in _call_flat
+    ctx, args, cancellation_manager=cancellation_manager))
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/eager/function.py", line 598, in call
+    ctx=ctx)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/eager/execute.py", line 60, in quick_execute
+    inputs, attrs, num_outputs)
+tensorflow.python.framework.errors_impl.InvalidArgumentError:  logits and labels must be broadcastable: logits_size=[32,70] labels_size=[32,40]
+	 [[node categorical_crossentropy/softmax_cross_entropy_with_logits (defined at model.py:124) ]] [Op:__inference_train_function_1366]
+
+Function call stack:
+train_function
+
+2024-12-02 08:18:11.738676: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+	 [[{{node PyFunc}}]]

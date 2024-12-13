@@ -1,0 +1,79 @@
+                                                                                                                                                
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 20.07-tf1 (build 14714473.1)
+TensorFlow Version 1.15.3
+
+Container image Copyright (c) 2020, NVIDIA CORPORATION.  All rights reserved.
+Copyright 2017-2020 The TensorFlow Authors.  All rights reserved.
+
+NVIDIA Deep Learning Profiler (dlprof) Copyright (c) 2020, NVIDIA CORPORATION.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION.  All rights reserved.
+NVIDIA modifications are covered by the license terms that apply to the underlying project or file.
+
+Detected MOFED 5.7-1.0.2.
+
+NOTE: MOFED driver was detected, but nv_peer_mem driver was not detected.
+      Multi-node communication performance may be reduced.
+
+Thu Dec  5 20:33:47 2024[1]<stdout>:Namespace(augment_data='false', batch_size='32', data='/home/kettnert/FinalProject/data/70-dog-breedsimage-data-set-updated', epochs='2', fine_tune='true', main_dir='/home/kettnert/FinalProject')
+Thu Dec  5 20:33:47 2024[0]<stdout>:Namespace(augment_data='false', batch_size='32', data='/home/kettnert/FinalProject/data/70-dog-breedsimage-data-set-updated', epochs='2', fine_tune='true', main_dir='/home/kettnert/FinalProject')
+Thu Dec  5 20:33:48 2024[0]<stdout>:Model: "model_1"
+Thu Dec  5 20:33:48 2024[0]<stdout>:_________________________________________________________________
+Thu Dec  5 20:33:48 2024[0]<stdout>:Layer (type)                 Output Shape              Param #   
+Thu Dec  5 20:33:48 2024[0]<stdout>:=================================================================
+Thu Dec  5 20:33:48 2024[0]<stdout>:input_2 (InputLayer)         (None, 224, 224, 3)       0         
+Thu Dec  5 20:33:48 2024[0]<stdout>:_________________________________________________________________
+Thu Dec  5 20:33:48 2024[0]<stdout>:vgg16 (Model)                (None, 7, 7, 512)         14714688  
+Thu Dec  5 20:33:48 2024[0]<stdout>:_________________________________________________________________
+Thu Dec  5 20:33:48 2024[0]<stdout>:global_average_pooling2d_1 ( (None, 512)               0         
+Thu Dec  5 20:33:48 2024[0]<stdout>:_________________________________________________________________
+Thu Dec  5 20:33:48 2024[0]<stdout>:dense_1 (Dense)              (None, 40)                20520     
+Thu Dec  5 20:33:48 2024[0]<stdout>:=================================================================
+Thu Dec  5 20:33:48 2024[0]<stdout>:Total params: 14,735,208
+Thu Dec  5 20:33:48 2024[0]<stdout>:Trainable params: 20,520
+Thu Dec  5 20:33:48 2024[0]<stdout>:Non-trainable params: 14,714,688
+Thu Dec  5 20:33:48 2024[0]<stdout>:_________________________________________________________________
+Thu Dec  5 20:33:48 2024[1]<stdout>:Model: "model_1"
+Thu Dec  5 20:33:48 2024[1]<stdout>:_________________________________________________________________
+Thu Dec  5 20:33:48 2024[1]<stdout>:Layer (type)                 Output Shape              Param #   
+Thu Dec  5 20:33:48 2024[1]<stdout>:=================================================================
+Thu Dec  5 20:33:48 2024[1]<stdout>:input_2 (InputLayer)         (None, 224, 224, 3)       0         
+Thu Dec  5 20:33:48 2024[1]<stdout>:_________________________________________________________________
+Thu Dec  5 20:33:48 2024[1]<stdout>:vgg16 (Model)                (None, 7, 7, 512)         14714688  
+Thu Dec  5 20:33:48 2024[1]<stdout>:_________________________________________________________________
+Thu Dec  5 20:33:48 2024[1]<stdout>:global_average_pooling2d_1 ( (None, 512)               0         
+Thu Dec  5 20:33:48 2024[1]<stdout>:_________________________________________________________________
+Thu Dec  5 20:33:48 2024[1]<stdout>:dense_1 (Dense)              (None, 40)                20520     
+Thu Dec  5 20:33:48 2024[1]<stdout>:=================================================================
+Thu Dec  5 20:33:48 2024[1]<stdout>:Total params: 14,735,208
+Thu Dec  5 20:33:48 2024[1]<stdout>:Trainable params: 20,520
+Thu Dec  5 20:33:48 2024[1]<stdout>:Non-trainable params: 14,714,688
+Thu Dec  5 20:33:48 2024[1]<stdout>:_________________________________________________________________
+Thu Dec  5 20:33:49 2024[0]<stdout>:Found 4600 images belonging to 40 classes.
+Thu Dec  5 20:33:49 2024[1]<stdout>:Found 4600 images belonging to 40 classes.
+Thu Dec  5 20:33:49 2024[1]<stdout>:Found 400 images belonging to 40 classes.
+Thu Dec  5 20:33:49 2024[0]<stdout>:Found 400 images belonging to 40 classes.
+Thu Dec  5 20:33:49 2024[1]<stdout>:Epoch 1/2
+Thu Dec  5 20:33:49 2024[0]<stdout>:Epoch 1/2
+Thu Dec  5 20:34:18 2024[1]<stdout>: - 29s - loss: 139.2422 - accuracy: 0.5436 - val_loss: 12.7506 - val_accuracy: 0.8125
+Thu Dec  5 20:34:18 2024[1]<stdout>:Epoch 2/2
+Thu Dec  5 20:34:18 2024[0]<stdout>: - 29s - loss: 130.1892 - accuracy: 0.5552 - val_loss: 20.4621 - val_accuracy: 0.8594
+Thu Dec  5 20:34:18 2024[0]<stdout>:Epoch 2/2
+Thu Dec  5 20:34:33 2024[1]<stdout>: - 15s - loss: 32.5196 - accuracy: 0.7792 - val_loss: 9.0959 - val_accuracy: 0.9115
+Thu Dec  5 20:34:33 2024[1]<stdout>:fine tuning...
+Thu Dec  5 20:34:33 2024[0]<stdout>: - 15s - loss: 29.6119 - accuracy: 0.7879 - val_loss: 14.0178 - val_accuracy: 0.8750
+Thu Dec  5 20:34:33 2024[0]<stdout>:fine tuning...
+Thu Dec  5 20:34:34 2024[1]<stdout>:Epoch 1/2
+Thu Dec  5 20:34:34 2024[0]<stdout>:Epoch 1/2
+Thu Dec  5 20:35:30 2024[1]<stdout>: - 56s - loss: 9.4134 - accuracy: 0.8939 - val_loss: 8.3600 - val_accuracy: 0.8698
+Thu Dec  5 20:35:30 2024[1]<stdout>:Epoch 2/2
+Thu Dec  5 20:35:30 2024[0]<stdout>: - 56s - loss: 7.1665 - accuracy: 0.9064 - val_loss: 10.8385 - val_accuracy: 0.8958
+Thu Dec  5 20:35:30 2024[0]<stdout>:Epoch 2/2
+Thu Dec  5 20:36:08 2024[1]<stdout>: - 38s - loss: 3.2811 - accuracy: 0.9245 - val_loss: 0.5496 - val_accuracy: 0.9427
+Thu Dec  5 20:36:08 2024[0]<stdout>: - 38s - loss: 4.6003 - accuracy: 0.9142 - val_loss: 2.4793 - val_accuracy: 0.9115
+Thu Dec  5 20:36:08 2024[1]<stdout>:/home/kettnert/FinalProject/model_b32_e2 rank 1.png
+Thu Dec  5 20:36:08 2024[0]<stdout>:/home/kettnert/FinalProject/model_b32_e2 rank 0.png

@@ -1,0 +1,71 @@
+#!/usr/bin/env python
+"""
+Test script for Dog Breed Predictor
+Loads a trained model and predicts the breed for a given image
+
+Usage:
+    python test_model.py --model path/to/model.h5 --image path/to/dog_image.jpg
+"""
+
+import argparse
+import numpy as np
+from tensorflow import keras
+from tensorflow.keras.preprocessing.image import load_img, img_to_array
+import os
+
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--model', type=str, required=True, help='Path to trained model .h5 file')
+    parser.add_argument('--image', type=str, required=True, help='Path to image file to test')
+    return parser.parse_args()
+
+def load_and_prepare_image(image_path):
+    # Load and resize image to match model's expected sizing
+    img = load_img(image_path, target_size=(224, 224))
+    
+    # Convert image to array
+    img_array = img_to_array(img)
+    
+    # Expand dimensions to match model's expected input
+    img_array = np.expand_dims(img_array, axis=0)
+    
+    # Center the image data (as done in training)
+    img_array = img_array - np.mean(img_array)
+    
+    return img_array
+
+def main():
+    args = parse_args()
+    
+    # Load the trained model
+    model = keras.models.load_model(args.model)
+    
+    # Prepare the image
+    processed_image = load_and_prepare_image(args.image)
+    
+    # Get prediction
+    predictions = model.predict(processed_image)
+    
+    # Get the class with highest probability
+    predicted_class = np.argmax(predictions[0])
+    confidence = predictions[0][predicted_class] * 100
+    
+    # Load class names from training directory structure
+    # This should match the order of classes used during training
+    breed_names = sorted(os.listdir(os.path.join(os.path.dirname(args.model), 'data/70-dog-breedsimage-data-set-updated/train')))
+    
+    predicted_breed = breed_names[predicted_class]
+    
+    print(f"\nPredicted breed: {predicted_breed}")
+    print(f"Confidence: {confidence:.2f}%")
+    
+    # Print top 3 predictions
+    top_3_indices = np.argsort(predictions[0])[-3:][::-1]
+    print("\nTop 3 predictions:")
+    for idx in top_3_indices:
+        breed = breed_names[idx]
+        conf = predictions[0][idx] * 100
+        print(f"{breed}: {conf:.2f}%")
+
+if __name__ == "__main__":
+    main()

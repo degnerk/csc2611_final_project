@@ -1,0 +1,71 @@
+MOFED version '5.7-1.0.2' not available in this container.
+No matching alternate version found.
+                                                                                                                                                
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 20.07-tf2 (build 14714731)
+TensorFlow Version 2.2.0
+
+Container image Copyright (c) 2020, NVIDIA CORPORATION.  All rights reserved.
+Copyright 2017-2020 The TensorFlow Authors.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION.  All rights reserved.
+NVIDIA modifications are covered by the license terms that apply to the underlying project or file.
+ERROR: No supported GPU(s) detected to run this container
+
+Detected MOFED 5.7-1.0.2.
+
+NOTE: MOFED driver was detected, but nv_peer_mem driver was not detected.
+      Multi-node communication performance may be reduced.
+
+2024-12-02 22:16:41.364344: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.11.0
+2024-12-02 22:16:46.139137: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2024-12-02 22:16:46.144948: E tensorflow/stream_executor/cuda/cuda_driver.cc:313] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2024-12-02 22:16:46.144977: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: dh-node13
+2024-12-02 22:16:46.144982: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: dh-node13
+2024-12-02 22:16:46.146203: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: Invalid argument: expected %d.%d, %d.%d.%d, or %d.%d.%d.%d form for driver version; got "1"
+2024-12-02 22:16:46.146231: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 555.42.2
+2024-12-02 22:16:46.165789: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 2600000000 Hz
+2024-12-02 22:16:46.166982: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7f8a90000b20 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2024-12-02 22:16:46.167001: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Namespace(augment_data='false', batch_size='16', data='/home/kettnert/FinalProject/data/70-dog-breedsimage-data-set-updated', epochs='10', fine_tune='false', main_dir='/home/kettnert/FinalProject')
+Model: "model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_2 (InputLayer)         [(None, 224, 224, 3)]     0         
+_________________________________________________________________
+vgg16 (Model)                (None, 7, 7, 512)         14714688  
+_________________________________________________________________
+global_average_pooling2d (Gl (None, 512)               0         
+_________________________________________________________________
+dense (Dense)                (None, 40)                20520     
+=================================================================
+Total params: 14,735,208
+Trainable params: 20,520
+Non-trainable params: 14,714,688
+_________________________________________________________________
+Found 4600 images belonging to 40 classes.
+Found 400 images belonging to 40 classes.
+Epoch 1/10
+288/288 - 989s - loss: 4.9648 - accuracy: 0.3970 - val_loss: 1.3580 - val_accuracy: 0.7025
+Epoch 2/10
+288/288 - 975s - loss: 1.1398 - accuracy: 0.7341 - val_loss: 0.7165 - val_accuracy: 0.8225
+Epoch 3/10
+288/288 - 972s - loss: 0.6458 - accuracy: 0.8287 - val_loss: 0.5792 - val_accuracy: 0.8500
+Epoch 4/10
+288/288 - 974s - loss: 0.3825 - accuracy: 0.8870 - val_loss: 0.5854 - val_accuracy: 0.8550
+Epoch 5/10
+288/288 - 970s - loss: 0.2675 - accuracy: 0.9211 - val_loss: 0.4866 - val_accuracy: 0.8650
+Epoch 6/10
+288/288 - 975s - loss: 0.1861 - accuracy: 0.9435 - val_loss: 0.3763 - val_accuracy: 0.8925
+Epoch 7/10
+288/288 - 973s - loss: 0.1405 - accuracy: 0.9552 - val_loss: 0.3583 - val_accuracy: 0.8925
+Epoch 8/10
+288/288 - 984s - loss: 0.1018 - accuracy: 0.9659 - val_loss: 0.3732 - val_accuracy: 0.9200
+Epoch 9/10
+288/288 - 987s - loss: 0.0842 - accuracy: 0.9774 - val_loss: 0.2962 - val_accuracy: 0.9150
+Epoch 10/10
+288/288 - 1017s - loss: 0.0912 - accuracy: 0.9700 - val_loss: 0.4059 - val_accuracy: 0.8725
