@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Fresh/Rotten fruit predictor
+
 
 Written by Derek Riley, inspired by Nvidia DLI training  Modified by Theresa Kettner
 
