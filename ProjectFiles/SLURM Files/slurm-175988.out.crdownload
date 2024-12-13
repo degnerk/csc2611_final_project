@@ -1,0 +1,143 @@
+                                                                                                                                                
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 20.07-tf1 (build 14714473.1)
+TensorFlow Version 1.15.3
+
+Container image Copyright (c) 2020, NVIDIA CORPORATION.  All rights reserved.
+Copyright 2017-2020 The TensorFlow Authors.  All rights reserved.
+
+NVIDIA Deep Learning Profiler (dlprof) Copyright (c) 2020, NVIDIA CORPORATION.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION.  All rights reserved.
+NVIDIA modifications are covered by the license terms that apply to the underlying project or file.
+
+Detected MOFED 5.7-1.0.2.
+
+NOTE: MOFED driver was detected, but nv_peer_mem driver was not detected.
+      Multi-node communication performance may be reduced.
+
+Sun Dec  8 14:05:22 2024[0]<stdout>:Namespace(augment_data='false', batch_size='16', data='/home/kettnert/FinalProject/data/70-dog-breedsimage-data-set-updated', epochs='10', fine_tune='true', main_dir='/home/kettnert/FinalProject')
+Sun Dec  8 14:05:22 2024[1]<stdout>:Namespace(augment_data='false', batch_size='16', data='/home/kettnert/FinalProject/data/70-dog-breedsimage-data-set-updated', epochs='10', fine_tune='true', main_dir='/home/kettnert/FinalProject')
+Sun Dec  8 14:05:23 2024[1]<stdout>:Model: "model_1"
+Sun Dec  8 14:05:23 2024[1]<stdout>:_________________________________________________________________
+Sun Dec  8 14:05:23 2024[1]<stdout>:Layer (type)                 Output Shape              Param #   
+Sun Dec  8 14:05:23 2024[1]<stdout>:=================================================================
+Sun Dec  8 14:05:23 2024[1]<stdout>:input_2 (InputLayer)         (None, 224, 224, 3)       0         
+Sun Dec  8 14:05:23 2024[1]<stdout>:_________________________________________________________________
+Sun Dec  8 14:05:23 2024[1]<stdout>:vgg16 (Model)                (None, 7, 7, 512)         14714688  
+Sun Dec  8 14:05:23 2024[1]<stdout>:_________________________________________________________________
+Sun Dec  8 14:05:23 2024[1]<stdout>:global_average_pooling2d_1 ( (None, 512)               0         
+Sun Dec  8 14:05:23 2024[1]<stdout>:_________________________________________________________________
+Sun Dec  8 14:05:23 2024[1]<stdout>:dense_1 (Dense)              (None, 40)                20520     
+Sun Dec  8 14:05:23 2024[1]<stdout>:=================================================================
+Sun Dec  8 14:05:23 2024[1]<stdout>:Total params: 14,735,208
+Sun Dec  8 14:05:23 2024[1]<stdout>:Trainable params: 20,520
+Sun Dec  8 14:05:23 2024[1]<stdout>:Non-trainable params: 14,714,688
+Sun Dec  8 14:05:23 2024[1]<stdout>:_________________________________________________________________
+Sun Dec  8 14:05:23 2024[0]<stdout>:Model: "model_1"
+Sun Dec  8 14:05:23 2024[0]<stdout>:_________________________________________________________________
+Sun Dec  8 14:05:23 2024[0]<stdout>:Layer (type)                 Output Shape              Param #   
+Sun Dec  8 14:05:23 2024[0]<stdout>:=================================================================
+Sun Dec  8 14:05:23 2024[0]<stdout>:input_2 (InputLayer)         (None, 224, 224, 3)       0         
+Sun Dec  8 14:05:23 2024[0]<stdout>:_________________________________________________________________
+Sun Dec  8 14:05:23 2024[0]<stdout>:vgg16 (Model)                (None, 7, 7, 512)         14714688  
+Sun Dec  8 14:05:23 2024[0]<stdout>:_________________________________________________________________
+Sun Dec  8 14:05:23 2024[0]<stdout>:global_average_pooling2d_1 ( (None, 512)               0         
+Sun Dec  8 14:05:23 2024[0]<stdout>:_________________________________________________________________
+Sun Dec  8 14:05:23 2024[0]<stdout>:dense_1 (Dense)              (None, 40)                20520     
+Sun Dec  8 14:05:23 2024[0]<stdout>:=================================================================
+Sun Dec  8 14:05:23 2024[0]<stdout>:Total params: 14,735,208
+Sun Dec  8 14:05:23 2024[0]<stdout>:Trainable params: 20,520
+Sun Dec  8 14:05:23 2024[0]<stdout>:Non-trainable params: 14,714,688
+Sun Dec  8 14:05:23 2024[0]<stdout>:_________________________________________________________________
+Sun Dec  8 14:05:23 2024[1]<stdout>:Found 4600 images belonging to 40 classes.
+Sun Dec  8 14:05:23 2024[0]<stdout>:Found 4600 images belonging to 40 classes.
+Sun Dec  8 14:05:23 2024[0]<stdout>:Found 400 images belonging to 40 classes.
+Sun Dec  8 14:05:23 2024[1]<stdout>:Found 400 images belonging to 40 classes.
+Sun Dec  8 14:05:24 2024[1]<stdout>:Epoch 1/10
+Sun Dec  8 14:05:24 2024[0]<stdout>:Epoch 1/10
+Sun Dec  8 14:05:50 2024[0]<stdout>: - 26s - loss: 133.2179 - accuracy: 0.5708 - val_loss: 26.3139 - val_accuracy: 0.8073
+Sun Dec  8 14:05:50 2024[0]<stdout>:Epoch 2/10
+Sun Dec  8 14:05:50 2024[1]<stdout>: - 26s - loss: 134.7551 - accuracy: 0.5829 - val_loss: 10.8467 - val_accuracy: 0.7812
+Sun Dec  8 14:05:50 2024[1]<stdout>:Epoch 2/10
+Sun Dec  8 14:06:04 2024[0]<stdout>: - 14s - loss: 38.3427 - accuracy: 0.7947 - val_loss: 34.6684 - val_accuracy: 0.8542
+Sun Dec  8 14:06:04 2024[0]<stdout>:Epoch 3/10
+Sun Dec  8 14:06:04 2024[1]<stdout>: - 14s - loss: 38.6950 - accuracy: 0.7850 - val_loss: 19.9346 - val_accuracy: 0.8021
+Sun Dec  8 14:06:04 2024[1]<stdout>:Epoch 3/10
+Sun Dec  8 14:06:17 2024[0]<stdout>: - 13s - loss: 34.0952 - accuracy: 0.8418 - val_loss: 37.6334 - val_accuracy: 0.8177
+Sun Dec  8 14:06:17 2024[0]<stdout>:Epoch 4/10
+Sun Dec  8 14:06:17 2024[1]<stdout>: - 13s - loss: 30.1051 - accuracy: 0.8439 - val_loss: 51.1686 - val_accuracy: 0.8385
+Sun Dec  8 14:06:17 2024[1]<stdout>:Epoch 4/10
+Sun Dec  8 14:06:31 2024[0]<stdout>: - 14s - loss: 34.9346 - accuracy: 0.8461 - val_loss: 5.9659 - val_accuracy: 0.8594
+Sun Dec  8 14:06:31 2024[0]<stdout>:Epoch 5/10
+Sun Dec  8 14:06:31 2024[1]<stdout>: - 14s - loss: 35.9313 - accuracy: 0.8545 - val_loss: 32.5988 - val_accuracy: 0.8490
+Sun Dec  8 14:06:31 2024[1]<stdout>:Epoch 5/10
+Sun Dec  8 14:06:44 2024[0]<stdout>: - 13s - loss: 22.5858 - accuracy: 0.8956 - val_loss: 156.1945 - val_accuracy: 0.8281
+Sun Dec  8 14:06:44 2024[0]<stdout>:Epoch 6/10
+Sun Dec  8 14:06:44 2024[1]<stdout>: - 13s - loss: 26.1176 - accuracy: 0.8772 - val_loss: 105.1128 - val_accuracy: 0.7812
+Sun Dec  8 14:06:44 2024[1]<stdout>:Epoch 6/10
+Sun Dec  8 14:06:58 2024[0]<stdout>: - 13s - loss: 25.7252 - accuracy: 0.8868 - val_loss: 0.0000e+00 - val_accuracy: 0.8854
+Sun Dec  8 14:06:58 2024[0]<stdout>:Epoch 7/10
+Sun Dec  8 14:06:58 2024[1]<stdout>: - 13s - loss: 27.4697 - accuracy: 0.8776 - val_loss: 49.1419 - val_accuracy: 0.8542
+Sun Dec  8 14:06:58 2024[1]<stdout>:Epoch 7/10
+Sun Dec  8 14:07:11 2024[0]<stdout>: - 14s - loss: 19.4189 - accuracy: 0.9117 - val_loss: 25.3568 - val_accuracy: 0.8281
+Sun Dec  8 14:07:11 2024[0]<stdout>:Epoch 8/10
+Sun Dec  8 14:07:12 2024[1]<stdout>: - 14s - loss: 16.8149 - accuracy: 0.9183 - val_loss: 23.3955 - val_accuracy: 0.8698
+Sun Dec  8 14:07:12 2024[1]<stdout>:Epoch 8/10
+Sun Dec  8 14:07:25 2024[0]<stdout>: - 14s - loss: 19.7962 - accuracy: 0.9088 - val_loss: 59.5909 - val_accuracy: 0.8542
+Sun Dec  8 14:07:25 2024[0]<stdout>:Epoch 9/10
+Sun Dec  8 14:07:25 2024[1]<stdout>: - 14s - loss: 20.6424 - accuracy: 0.9057 - val_loss: 75.1175 - val_accuracy: 0.8542
+Sun Dec  8 14:07:25 2024[1]<stdout>:Epoch 9/10
+Sun Dec  8 14:07:39 2024[0]<stdout>: - 14s - loss: 13.7711 - accuracy: 0.9362 - val_loss: 30.6143 - val_accuracy: 0.8438
+Sun Dec  8 14:07:39 2024[0]<stdout>:Epoch 10/10
+Sun Dec  8 14:07:39 2024[1]<stdout>: - 14s - loss: 15.6335 - accuracy: 0.9351 - val_loss: 19.3881 - val_accuracy: 0.8542
+Sun Dec  8 14:07:39 2024[1]<stdout>:Epoch 10/10
+Sun Dec  8 14:07:53 2024[0]<stdout>: - 14s - loss: 15.2950 - accuracy: 0.9377 - val_loss: 93.5162 - val_accuracy: 0.8594
+Sun Dec  8 14:07:53 2024[1]<stdout>: - 14s - loss: 17.9143 - accuracy: 0.9375 - val_loss: 104.9942 - val_accuracy: 0.8490
+Sun Dec  8 14:07:53 2024[0]<stdout>:fine tuning...
+Sun Dec  8 14:07:53 2024[1]<stdout>:fine tuning...
+Sun Dec  8 14:07:54 2024[0]<stdout>:Epoch 1/10
+Sun Dec  8 14:07:55 2024[1]<stdout>:Epoch 1/10
+Sun Dec  8 14:08:42 2024[0]<stdout>: - 48s - loss: 4.7356 - accuracy: 0.9720 - val_loss: 11.1156 - val_accuracy: 0.8958
+Sun Dec  8 14:08:42 2024[0]<stdout>:Epoch 2/10
+Sun Dec  8 14:08:42 2024[1]<stdout>: - 48s - loss: 3.5559 - accuracy: 0.9751 - val_loss: 17.5188 - val_accuracy: 0.8802
+Sun Dec  8 14:08:42 2024[1]<stdout>:Epoch 2/10
+Sun Dec  8 14:09:20 2024[0]<stdout>: - 38s - loss: 1.1659 - accuracy: 0.9838 - val_loss: 28.2238 - val_accuracy: 0.9219
+Sun Dec  8 14:09:20 2024[0]<stdout>:Epoch 3/10
+Sun Dec  8 14:09:20 2024[1]<stdout>: - 38s - loss: 1.9262 - accuracy: 0.9833 - val_loss: 0.3903 - val_accuracy: 0.9323
+Sun Dec  8 14:09:20 2024[1]<stdout>:Epoch 3/10
+Sun Dec  8 14:09:56 2024[0]<stdout>: - 35s - loss: 0.3814 - accuracy: 0.9930 - val_loss: 9.7601 - val_accuracy: 0.8958
+Sun Dec  8 14:09:56 2024[0]<stdout>:Epoch 4/10
+Sun Dec  8 14:09:56 2024[1]<stdout>: - 35s - loss: 0.5205 - accuracy: 0.9908 - val_loss: 0.0000e+00 - val_accuracy: 0.9219
+Sun Dec  8 14:09:56 2024[1]<stdout>:Epoch 4/10
+Sun Dec  8 14:10:30 2024[0]<stdout>: - 35s - loss: 0.5063 - accuracy: 0.9921 - val_loss: 4.2224 - val_accuracy: 0.8906
+Sun Dec  8 14:10:30 2024[0]<stdout>:Epoch 5/10
+Sun Dec  8 14:10:30 2024[1]<stdout>: - 35s - loss: 0.3239 - accuracy: 0.9943 - val_loss: 48.7425 - val_accuracy: 0.9062
+Sun Dec  8 14:10:30 2024[1]<stdout>:Epoch 5/10
+Sun Dec  8 14:11:05 2024[0]<stdout>: - 35s - loss: 0.1073 - accuracy: 0.9969 - val_loss: 0.0000e+00 - val_accuracy: 0.9219
+Sun Dec  8 14:11:05 2024[0]<stdout>:Epoch 6/10
+Sun Dec  8 14:11:05 2024[1]<stdout>: - 35s - loss: 0.1205 - accuracy: 0.9978 - val_loss: 0.0000e+00 - val_accuracy: 0.9062
+Sun Dec  8 14:11:05 2024[1]<stdout>:Epoch 6/10
+Sun Dec  8 14:11:40 2024[0]<stdout>: - 35s - loss: 0.2697 - accuracy: 0.9961 - val_loss: 0.0000e+00 - val_accuracy: 0.9375
+Sun Dec  8 14:11:40 2024[0]<stdout>:Epoch 7/10
+Sun Dec  8 14:11:40 2024[1]<stdout>: - 35s - loss: 0.2944 - accuracy: 0.9961 - val_loss: 3.8330 - val_accuracy: 0.8958
+Sun Dec  8 14:11:40 2024[1]<stdout>:Epoch 7/10
+Sun Dec  8 14:12:15 2024[0]<stdout>: - 35s - loss: 0.0657 - accuracy: 0.9982 - val_loss: 5.0664e-07 - val_accuracy: 0.9167
+Sun Dec  8 14:12:15 2024[0]<stdout>:Epoch 8/10
+Sun Dec  8 14:12:15 2024[1]<stdout>: - 35s - loss: 0.1298 - accuracy: 0.9974 - val_loss: 2.1127 - val_accuracy: 0.9167
+Sun Dec  8 14:12:15 2024[1]<stdout>:Epoch 8/10
+Sun Dec  8 14:12:50 2024[0]<stdout>: - 35s - loss: 0.1975 - accuracy: 0.9974 - val_loss: 102.1580 - val_accuracy: 0.8906
+Sun Dec  8 14:12:50 2024[0]<stdout>:Epoch 9/10
+Sun Dec  8 14:12:50 2024[1]<stdout>: - 35s - loss: 0.0753 - accuracy: 0.9978 - val_loss: 36.5718 - val_accuracy: 0.9010
+Sun Dec  8 14:12:50 2024[1]<stdout>:Epoch 9/10
+Sun Dec  8 14:13:24 2024[0]<stdout>: - 35s - loss: 0.0800 - accuracy: 0.9987 - val_loss: 25.1073 - val_accuracy: 0.8958
+Sun Dec  8 14:13:24 2024[0]<stdout>:Epoch 10/10
+Sun Dec  8 14:13:24 2024[1]<stdout>: - 35s - loss: 0.0607 - accuracy: 0.9983 - val_loss: 6.9296 - val_accuracy: 0.8958
+Sun Dec  8 14:13:24 2024[1]<stdout>:Epoch 10/10
+Sun Dec  8 14:13:59 2024[0]<stdout>: - 35s - loss: 0.0319 - accuracy: 0.9978 - val_loss: 60.6626 - val_accuracy: 0.9115
+Sun Dec  8 14:13:59 2024[1]<stdout>: - 35s - loss: 0.0433 - accuracy: 0.9982 - val_loss: 0.0000e+00 - val_accuracy: 0.9062
+Sun Dec  8 14:13:59 2024[0]<stdout>:/home/kettnert/FinalProject/model_b16_e10 rank 0.png
+Sun Dec  8 14:14:00 2024[1]<stdout>:/home/kettnert/FinalProject/model_b16_e10 rank 1.png

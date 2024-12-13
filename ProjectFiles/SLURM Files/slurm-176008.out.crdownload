@@ -1,0 +1,40 @@
+MOFED version '5.7-1.0.2' not available in this container.
+No matching alternate version found.
+                                                                                                                                                
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 20.07-tf2 (build 14714731)
+TensorFlow Version 2.2.0
+
+Container image Copyright (c) 2020, NVIDIA CORPORATION.  All rights reserved.
+Copyright 2017-2020 The TensorFlow Authors.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION.  All rights reserved.
+NVIDIA modifications are covered by the license terms that apply to the underlying project or file.
+ERROR: No supported GPU(s) detected to run this container
+
+Detected MOFED 5.7-1.0.2.
+
+NOTE: MOFED driver was detected, but nv_peer_mem driver was not detected.
+      Multi-node communication performance may be reduced.
+
+2024-12-08 15:16:54.005639: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.11.0
+2024-12-08 15:16:59.108277: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2024-12-08 15:16:59.111987: E tensorflow/stream_executor/cuda/cuda_driver.cc:313] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2024-12-08 15:16:59.112017: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: dh-node14
+2024-12-08 15:16:59.112022: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: dh-node14
+2024-12-08 15:16:59.113265: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: Invalid argument: expected %d.%d, %d.%d.%d, or %d.%d.%d.%d form for driver version; got "1"
+2024-12-08 15:16:59.113290: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 555.42.2
+2024-12-08 15:16:59.132138: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 2600000000 Hz
+2024-12-08 15:16:59.133456: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7fe130000b20 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2024-12-08 15:16:59.133476: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+
+Predicted breed: Pug
+Confidence: 44.38%
+
+Top 3 predictions:
+Pug: 44.38%
+French Bulldog: 34.19%
+Bulldog: 16.82%

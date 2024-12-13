@@ -1,0 +1,57 @@
+                                                                                                                                                
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 20.07-tf1 (build 14714473.1)
+TensorFlow Version 1.15.3
+
+Container image Copyright (c) 2020, NVIDIA CORPORATION.  All rights reserved.
+Copyright 2017-2020 The TensorFlow Authors.  All rights reserved.
+
+NVIDIA Deep Learning Profiler (dlprof) Copyright (c) 2020, NVIDIA CORPORATION.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION.  All rights reserved.
+NVIDIA modifications are covered by the license terms that apply to the underlying project or file.
+
+Detected MOFED 5.7-1.0.2.
+
+NOTE: MOFED driver was detected, but nv_peer_mem driver was not detected.
+      Multi-node communication performance may be reduced.
+
+Thu Dec  5 20:01:11 2024[1]<stdout>:Namespace(augment_data='false', batch_size='32', data='/home/kettnert/FinalProject/data', epochs='2', fine_tune='true', main_dir='/home/kettnert/FinalProject')
+Thu Dec  5 20:01:12 2024[0]<stdout>:Namespace(augment_data='false', batch_size='32', data='/home/kettnert/FinalProject/data', epochs='2', fine_tune='true', main_dir='/home/kettnert/FinalProject')
+Thu Dec  5 20:01:18 2024[1]<stdout>:Model: "model"
+Thu Dec  5 20:01:18 2024[1]<stdout>:_________________________________________________________________
+Thu Dec  5 20:01:18 2024[1]<stdout>:Layer (type)                 Output Shape              Param #   
+Thu Dec  5 20:01:18 2024[1]<stdout>:=================================================================
+Thu Dec  5 20:01:18 2024[1]<stdout>:input_2 (InputLayer)         [(None, 224, 224, 3)]     0         
+Thu Dec  5 20:01:18 2024[1]<stdout>:_________________________________________________________________
+Thu Dec  5 20:01:18 2024[1]<stdout>:vgg16 (Model)                (None, 7, 7, 512)         14714688  
+Thu Dec  5 20:01:18 2024[1]<stdout>:_________________________________________________________________
+Thu Dec  5 20:01:18 2024[1]<stdout>:global_average_pooling2d (Gl (None, 512)               0         
+Thu Dec  5 20:01:18 2024[1]<stdout>:_________________________________________________________________
+Thu Dec  5 20:01:18 2024[1]<stdout>:dense (Dense)                (None, 40)                20520     
+Thu Dec  5 20:01:18 2024[1]<stdout>:=================================================================
+Thu Dec  5 20:01:18 2024[1]<stdout>:Total params: 14,735,208
+Thu Dec  5 20:01:18 2024[1]<stdout>:Trainable params: 20,520
+Thu Dec  5 20:01:18 2024[1]<stdout>:Non-trainable params: 14,714,688
+Thu Dec  5 20:01:18 2024[1]<stdout>:_________________________________________________________________
+Thu Dec  5 20:01:18 2024[0]<stdout>:Model: "model"
+Thu Dec  5 20:01:18 2024[0]<stdout>:_________________________________________________________________
+Thu Dec  5 20:01:18 2024[0]<stdout>:Layer (type)                 Output Shape              Param #   
+Thu Dec  5 20:01:18 2024[0]<stdout>:=================================================================
+Thu Dec  5 20:01:18 2024[0]<stdout>:input_2 (InputLayer)         [(None, 224, 224, 3)]     0         
+Thu Dec  5 20:01:18 2024[0]<stdout>:_________________________________________________________________
+Thu Dec  5 20:01:18 2024[0]<stdout>:vgg16 (Model)                (None, 7, 7, 512)         14714688  
+Thu Dec  5 20:01:18 2024[0]<stdout>:_________________________________________________________________
+Thu Dec  5 20:01:18 2024[0]<stdout>:global_average_pooling2d (Gl (None, 512)               0         
+Thu Dec  5 20:01:18 2024[0]<stdout>:_________________________________________________________________
+Thu Dec  5 20:01:18 2024[0]<stdout>:dense (Dense)                (None, 40)                20520     
+Thu Dec  5 20:01:18 2024[0]<stdout>:=================================================================
+Thu Dec  5 20:01:18 2024[0]<stdout>:Total params: 14,735,208
+Thu Dec  5 20:01:18 2024[0]<stdout>:Trainable params: 20,520
+Thu Dec  5 20:01:18 2024[0]<stdout>:Non-trainable params: 14,714,688
+Thu Dec  5 20:01:18 2024[0]<stdout>:_________________________________________________________________
+Process 1 exit with status code 1.
+Process 0 exit with status code 1.

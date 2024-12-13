@@ -1,0 +1,36 @@
+MOFED version '5.7-1.0.2' not available in this container.
+No matching alternate version found.
+                                                                                                                                                
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 20.07-tf2 (build 14714731)
+TensorFlow Version 2.2.0
+
+Container image Copyright (c) 2020, NVIDIA CORPORATION.  All rights reserved.
+Copyright 2017-2020 The TensorFlow Authors.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION.  All rights reserved.
+NVIDIA modifications are covered by the license terms that apply to the underlying project or file.
+ERROR: No supported GPU(s) detected to run this container
+
+Detected MOFED 5.7-1.0.2.
+
+NOTE: MOFED driver was detected, but nv_peer_mem driver was not detected.
+      Multi-node communication performance may be reduced.
+
+Traceback (most recent call last):
+  File "knn_dog_tester.py", line 141, in <module>
+    main()
+  File "knn_dog_tester.py", line 132, in main
+    breed, confidence = predict_breed(args.image, args.model)
+  File "knn_dog_tester.py", line 86, in predict_breed
+    saved_data = joblib.load(model_path)
+  File "/usr/local/lib/python3.6/dist-packages/joblib/numpy_pickle.py", line 585, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+  File "/usr/local/lib/python3.6/dist-packages/joblib/numpy_pickle.py", line 504, in _unpickle
+    obj = unpickler.load()
+  File "/usr/lib/python3.6/pickle.py", line 1050, in load
+    dispatch[key[0]](self)
+KeyError: 72
